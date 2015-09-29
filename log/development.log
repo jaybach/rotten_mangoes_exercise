@@ -501,3 +501,44 @@ Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2015-09-29 03:51:29 +0000
 
 
 Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-09-29 03:51:29 +0000
+
+
+Started GET "/movies" for 10.0.2.2 at 2015-09-29 04:03:13 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (2.1ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (24.9ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 150ms (Views: 128.9ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 10.0.2.2 at 2015-09-29 04:03:13 +0000
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2015-09-29 04:03:13 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-09-29 04:03:13 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-09-29 04:03:13 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-09-29 04:03:13 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-09-29 04:03:13 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-09-29 04:03:13 +0000
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2015-09-29 04:03:13 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 10.0.2.2 at 2015-09-29 04:03:13 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2015-09-29 04:03:13 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-09-29 04:03:13 +0000

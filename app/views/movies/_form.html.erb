@@ -2,7 +2,7 @@
 
 
 <%= form_for @movie do |f| %>
-  <% if @movie.erros.any? %>
+  <% if @movie.errors.any? %>
     <div>
       <%= pluralize(@movie.errors.count, "error") %> prevented this movie from being submitted:
       <ul>

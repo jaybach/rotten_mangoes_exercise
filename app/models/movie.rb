@@ -14,7 +14,7 @@ class Movie < ActiveRecord::Base
 
   validates :release_date, presence: true
 
-  validate :release_date_is_in_the_future
+  # validate :release_date_is_in_the_future
 
   def review_average
     if reviews.size > 0

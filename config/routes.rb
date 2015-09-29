@@ -4,7 +4,9 @@ RottenMangoes::Application.routes.draw do
   get "sessions/create"
   get "users/new"
   get "users/create"
-  resources :movies
+
+  resources :movies do
+    resources :reviews, only: [:new, :create]
 
   resources :users, only: [:new, :create]
 
@@ -73,4 +75,4 @@ end
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-# end
+end

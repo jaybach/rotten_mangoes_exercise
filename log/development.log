@@ -193,3 +193,311 @@ ActiveRecord::PendingMigrationError (Migrations are pending; run 'rake db:migrat
   Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
   Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
   Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.8ms)
+
+
+Started GET "/movies/new" for 10.0.2.2 at 2015-09-29 01:33:46 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (Migrations are pending; run 'rake db:migrate RAILS_ENV=development' to resolve this issue.):
+  activerecord (4.0.0) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.0) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__77214486__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddNameFieldsToUsers (20150929010625)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (2.5ms)[0m  [1mALTER TABLE "users" ADD "firstname" varchar(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "lastname" varchar(255)
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150929010625"]]
+  [1m[35m (11.3ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/movies/new" for 10.0.2.2 at 2015-09-29 01:34:32 +0000
+  [1m[35mActiveRecord::SchemaMigration Load (1.8ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by MoviesController#new as HTML
+  Rendered movies/_form.html.erb (24.4ms)
+  Rendered movies/new.html.erb within layouts/application (42.3ms)
+Completed 200 OK in 777ms (Views: 758.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 10.0.2.2 at 2015-09-29 01:34:33 +0000
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2015-09-29 01:34:33 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-09-29 01:34:33 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-09-29 01:34:33 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-09-29 01:34:33 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-09-29 01:34:33 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 10.0.2.2 at 2015-09-29 01:34:33 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2015-09-29 01:34:33 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-09-29 01:34:33 +0000
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2015-09-29 01:34:33 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-09-29 01:34:34 +0000
+
+
+Started GET "/" for 10.0.2.2 at 2015-09-29 03:38:44 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (9.6ms)
+Completed 200 OK in 67ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2015-09-29 03:46:23 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/new" for 10.0.2.2 at 2015-09-29 03:46:35 +0000
+Processing by MoviesController#new as HTML
+  Rendered movies/_form.html.erb (72.7ms)
+  Rendered movies/new.html.erb within layouts/application (110.7ms)
+Completed 200 OK in 392ms (Views: 371.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-09-29 03:46:35 +0000
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2015-09-29 03:46:35 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-09-29 03:46:35 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 10.0.2.2 at 2015-09-29 03:46:35 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-09-29 03:46:35 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-09-29 03:46:35 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-09-29 03:46:35 +0000
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2015-09-29 03:46:36 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 10.0.2.2 at 2015-09-29 03:46:36 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2015-09-29 03:46:36 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-09-29 03:46:36 +0000
+
+
+Started POST "/movies" for 10.0.2.2 at 2015-09-29 03:48:19 +0000
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4Pjg351w8YjG2zcMcYMNzlP75AQ5atFecV+oW1RvUII=", "movie"=>{"title"=>"Dumb & Dumber", "release_date"=>"", "director"=>"Peter Farrelly and Bobby Farrelly", "runtime_in_minutes"=>"107", "poster_image_url"=>"", "description"=>"Funny!"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered movies/_form.html.erb (39.0ms)
+  Rendered movies/new.html.erb within layouts/application (57.1ms)
+Completed 500 Internal Server Error in 113ms
+
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+     6:     <div>
+     7:       <%= pluralize(@movie.errors.count, "error") %> prevented this movie from being submitted:
+     8:       <ul>
+     9:         <% @movies.errors.full_messages.each do |msg| %>
+    10:           <li><%= msg %></li>
+    11:         <% end %>
+    12:       </ul>
+  app/views/movies/_form.html.erb:9:in `block in _app_views_movies__form_html_erb__115621862_93538210'
+  app/views/movies/_form.html.erb:4:in `_app_views_movies__form_html_erb__115621862_93538210'
+  app/views/movies/new.html.erb:8:in `_app_views_movies_new_html_erb___268750567_93725510'
+  app/controllers/movies_controller.rb:24:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.3/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.4ms)
+
+
+Started POST "/movies" for 10.0.2.2 at 2015-09-29 03:49:51 +0000
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4Pjg351w8YjG2zcMcYMNzlP75AQ5atFecV+oW1RvUII=", "movie"=>{"title"=>"Dumb & Dumber", "release_date"=>"", "director"=>"Peter Farrelly and Bobby Farrelly", "runtime_in_minutes"=>"107", "poster_image_url"=>"", "description"=>"Funny!"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered movies/_form.html.erb (5.0ms)
+  Rendered movies/new.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 118ms (Views: 113.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 10.0.2.2 at 2015-09-29 03:49:51 +0000
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2015-09-29 03:49:51 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-09-29 03:49:51 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-09-29 03:49:51 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-09-29 03:49:51 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-09-29 03:49:51 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-09-29 03:49:51 +0000
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2015-09-29 03:49:51 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 10.0.2.2 at 2015-09-29 03:49:51 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2015-09-29 03:49:51 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-09-29 03:49:51 +0000
+
+
+Started POST "/movies" for 10.0.2.2 at 2015-09-29 03:51:09 +0000
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4Pjg351w8YjG2zcMcYMNzlP75AQ5atFecV+oW1RvUII=", "movie"=>{"title"=>"Dumb & Dumber", "release_date"=>"1994-12-16", "director"=>"Peter Farrelly and Bobby Farrelly", "runtime_in_minutes"=>"107", "poster_image_url"=>"http://images.moviepostershop.com/dumb-and-dumber-movie-poster-1994-1020191993.jpg", "description"=>"Funny!"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered movies/_form.html.erb (3.8ms)
+  Rendered movies/new.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 127ms (Views: 117.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-09-29 03:51:10 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-09-29 03:51:10 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 10.0.2.2 at 2015-09-29 03:51:10 +0000
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2015-09-29 03:51:10 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-09-29 03:51:10 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-09-29 03:51:10 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-09-29 03:51:10 +0000
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2015-09-29 03:51:10 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 10.0.2.2 at 2015-09-29 03:51:10 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2015-09-29 03:51:10 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-09-29 03:51:10 +0000
+
+
+Started POST "/movies" for 10.0.2.2 at 2015-09-29 03:51:28 +0000
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4Pjg351w8YjG2zcMcYMNzlP75AQ5atFecV+oW1RvUII=", "movie"=>{"title"=>"Dumb & Dumber", "release_date"=>"2994-12-16", "director"=>"Peter Farrelly and Bobby Farrelly", "runtime_in_minutes"=>"107", "poster_image_url"=>"http://images.moviepostershop.com/dumb-and-dumber-movie-poster-1994-1020191993.jpg", "description"=>"Funny!"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (20.1ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "poster_image_url", "release_date", "runtime_in_minutes", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 29 Sep 2015 03:51:28 UTC +00:00], ["description", "Funny!"], ["director", "Peter Farrelly and Bobby Farrelly"], ["poster_image_url", "http://images.moviepostershop.com/dumb-and-dumber-movie-poster-1994-1020191993.jpg"], ["release_date", Tue, 16 Dec 2994 00:00:00 UTC +00:00], ["runtime_in_minutes", 107], ["title", "Dumb & Dumber"], ["updated_at", Tue, 29 Sep 2015 03:51:28 UTC +00:00]]
+  [1m[35m (3.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 30ms (ActiveRecord: 23.6ms)
+
+
+Started GET "/movies" for 10.0.2.2 at 2015-09-29 03:51:28 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.5ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 99ms (Views: 96.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2015-09-29 03:51:28 +0000
+
+
+Started GET "/assets/movies.css?body=1" for 10.0.2.2 at 2015-09-29 03:51:28 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2015-09-29 03:51:28 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2015-09-29 03:51:28 +0000
+
+
+Started GET "/assets/sessions.css?body=1" for 10.0.2.2 at 2015-09-29 03:51:28 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2015-09-29 03:51:28 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2015-09-29 03:51:28 +0000
+
+
+Started GET "/assets/movies.js?body=1" for 10.0.2.2 at 2015-09-29 03:51:28 +0000
+
+
+Started GET "/assets/sessions.js?body=1" for 10.0.2.2 at 2015-09-29 03:51:28 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2015-09-29 03:51:29 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2015-09-29 03:51:29 +0000
